@@ -7,8 +7,8 @@ from sklearn.linear_model import LogisticRegression
 from tkinter import messagebox
 import os
 dataset = [None,"iris"]
-
-files = ["Datasets"]+[i for i in list(os.listdir("C:\\Users\SHIKHAR\Desktop\A\Project\Application")) if ".csv" in i and i[:-4].lower() not in dataset]+[None]
+dir="C:\\Users\SHIKHAR\Desktop\A\Project\Application"
+files = ["Datasets"]+[i for i in list(os.listdir(dir)) if ".csv" in i and i[:-4].lower() not in dataset]+[None]
 def m():
         df=pd.read_csv(dataset[a.get()]+".csv")
         X=df.iloc[:,:-1]
